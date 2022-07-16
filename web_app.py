@@ -2,7 +2,7 @@ from flask import Flask
 import os
 import signal
 
-from devOpsExperts.project.DevopsProject.db_connector import DbConnector
+from db_connector import DbConnector
 
 """
 The REST API gateway will be: 127.0.0.1:5001/get_user_name/<USER_ID>
