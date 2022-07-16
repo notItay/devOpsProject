@@ -6,7 +6,7 @@ pipeline {
                 script {
                     properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
-                git 'https://github.com/notItay/devOpsProject.git'
+                git branch: 'main', url: 'https://github.com/notItay/devOpsProject.git'
             }
         }
         stage('rest_app.py') {
