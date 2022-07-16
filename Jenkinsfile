@@ -35,9 +35,9 @@ pipeline {
             steps {
                 script {
                     if (checkOs() == 'Windows') {
-                        bat 'start/min python backend_testing.py'
+                        bat 'python backend_testing.py'
                     } else {
-                        sh 'nohup python backend_testing.py &'
+                        sh 'python backend_testing.py'
                     }
                 }
             }
@@ -46,9 +46,9 @@ pipeline {
             steps {
                 script {
                     if (checkOs() == 'Windows') {
-                        bat 'start/min python frontend_testing.py'
+                        bat 'python frontend_testing.py'
                     } else {
-                        sh 'nohup python frontend_testing.py &'
+                        sh 'python frontend_testing.py'
                     }
                 }
             }
@@ -57,9 +57,9 @@ pipeline {
             steps {
                 script {
                     if (checkOs() == 'Windows') {
-                        bat 'start/min python clean_environment.py'
+                        bat 'python clean_environment.py'
                     } else {
-                        sh 'nohup python clean_environment.py &'
+                        sh 'python clean_environment.py'
                     }
                 }
             }
