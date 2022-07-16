@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     if (checkOs() == 'Windows') {
-                        bat 'start/min python rest_app.py'
+                        bat 'start /min python rest_app.py'
                     } else {
                         sh 'nohup python rest_app.py &'
                     }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     if (checkOs() == 'Windows') {
-                        bat 'start/min python web_app.py'
+                        bat 'start /min python web_app.py'
                     } else {
                         sh 'nohup python web_app.py &'
                     }
